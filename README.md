@@ -101,7 +101,6 @@ The importance of keeping manifests in a safe location outside the cluster for r
  
 ![Scaling](screenshots/5-scaling-and-rolling-update.png) 
 
----
 
 
 
