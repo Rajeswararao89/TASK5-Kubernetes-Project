@@ -78,14 +78,7 @@ Later, I did another update:
 kubectl set image deployment/my-app my-app-container=nginx:1.26-alpine
 kubectl rollout status deployment/my-app
 
-📸 Screenshots
-I took screenshots of:
-Minikube cluster start & kubectl get nodes
-Pods running
-Services with NodePort
-Application output (Nginx welcome page)
-Scaling in action
-Rolling update progress
+---
 
 📚 Key Learnings
 How to set up and run a Kubernetes cluster locally with Minikube.
@@ -94,15 +87,21 @@ How to manage environment configuration using ConfigMaps and Secrets.
 Scaling deployments and performing rolling updates without downtime.
 The importance of keeping manifests in a safe location outside the cluster for reusability.
 
+---
+
 ## ​ Screenshots
 
-![Cluster Start](screenshots/1-cluster-start.png)  
-![Pods Running](screenshots/2-pods-running.png)  
-![Service Details](screenshots/3-service-details.png)  
-![Nginx Page](screenshots/4-nginx-page.png)  
-![Scaling](screenshots/5-scaling.png)  
+![Cluster Start](screenshots/1-cluster-start.png)
+ 
+![Pods Running](screenshots/2-pods-running.png)
+ 
+![Service Details](screenshots/3-service-details.png)
+ 
+![Nginx Page](screenshots/4-nginx-page.png)
+ 
+![Scaling](screenshots/5-scaling-and-rolling-update.png) 
 
-
+---
 
 
 
