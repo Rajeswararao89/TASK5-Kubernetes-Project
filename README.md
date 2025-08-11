@@ -48,46 +48,63 @@ This gave me a single-node Kubernetes cluster ready to use.
 
 2️⃣ Created ConfigMap & Secret
 To make the deployment more realistic, I created a ConfigMap for non-sensitive configs and a Secret for sensitive data.
+
 kubectl apply -f manifests/configmap.yaml
 kubectl apply -f manifests/secret.yaml
-
 3️⃣ Deployed the Application
 I wrote a Deployment manifest for an Nginx container, linked it to the ConfigMap & Secret, and exposed it using a NodePort service.
+
 kubectl apply -f manifests/deployment.yaml
 kubectl apply -f manifests/service.yaml
 kubectl get pods
 kubectl get svc
-
 4️⃣ Accessed the Application
 Since I was running in Vagrant, I used:
+
 minikube service my-app-service --url
 This gave me a working Nginx welcome page.
-which is http://192.168.49.2:30414/
 
 5️⃣ Scaled the Application
 To test Kubernetes scaling, I increased replicas from 2 to 3:
+
 kubectl scale deployment my-app --replicas=3
 kubectl get pods
-
 6️⃣ Performed Rolling Updates
 I updated the Nginx version twice to simulate production updates:
+
 kubectl set image deployment/my-app my-app-container=nginx:1.27-alpine
 kubectl rollout status deployment/my-app
-
 Later, I did another update:
+
 kubectl set image deployment/my-app my-app-container=nginx:1.26-alpine
 kubectl rollout status deployment/my-app
 
----
+📸 Screenshots
+I took screenshots of:
+
+Minikube cluster start & kubectl get nodes
+
+Pods running
+
+Services with NodePort
+
+Application output (Nginx welcome page)
+
+Scaling in action
+
+Rolling update progress
 
 📚 Key Learnings
 How to set up and run a Kubernetes cluster locally with Minikube.
+
 The difference between Pods, Deployments, and Services.
+
 How to manage environment configuration using ConfigMaps and Secrets.
+
 Scaling deployments and performing rolling updates without downtime.
+
 The importance of keeping manifests in a safe location outside the cluster for reusability.
 
----
 
 ## ​ Screenshots
 
