@@ -1,7 +1,7 @@
 # 🐳 Kubernetes Project with Minikube - Task 5
 
 This is my Task 5 from the DevOps Internship program where I had to deploy and manage an application using **Kubernetes** locally with **Minikube**.  
-I decided to go a bit beyond the basic requirements and implement extra Kubernetes features like **ConfigMaps, Secrets, scaling, and rolling updates** to make the project more realistic and closer to production scenarios.
+This project demonstrates complete Kubernetes workflow using Minikube — from deployment to scaling and updates.
 
 ---
 
@@ -94,13 +94,14 @@ How to manage environment configuration using ConfigMaps and Secrets.
 Scaling deployments and performing rolling updates without downtime.
 The importance of keeping manifests in a safe location outside the cluster for reusability.
 
-## 📸 Screenshots
+## ​ Screenshots
 
-![Cluster Start](screenshots/Screenshot%20(120).png)  
-![Pods Running](screenshots/Screenshot%20(121).png)  
-![Service Details](screenshots/Screenshot%20(122).png)  
-![Nginx Page](screenshots/Screenshot%20(123).png)  
-![Scaling](screenshots/Screenshot%20(124).png)  
+![Cluster Start](screenshots/1-cluster-start.png)  
+![Pods Running](screenshots/2-pods-running.png)  
+![Service Details](screenshots/3-service-details.png)  
+![Nginx Page](screenshots/4-nginx-page.png)  
+![Scaling](screenshots/5-scaling.png)  
+
 
 
 
