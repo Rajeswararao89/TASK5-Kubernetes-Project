@@ -96,13 +96,12 @@ The importance of keeping manifests in a safe location outside the cluster for r
 
 ## 📸 Screenshots
 
-| Step | Description | Screenshot |
-|------|-------------|------------|
-| 1 | Minikube cluster started | ![Cluster Start](screenshots/Screenshot%20(120).png) |
-| 2 | Pods running | ![Pods Running](screenshots/Screenshot%20(121).png) |
-| 3 | Service details | ![Service Details](screenshots/Screenshot%20(122).png) |
-| 4 | Nginx welcome page | ![Nginx Page](screenshots/Screenshot%20(123).png) |
-| 5 | Scaling deployment | ![Scaling](screenshots/Screenshot%20(124).png) |
+![Cluster Start](screenshots/Screenshot%20(120).png)
+![Pods Running](screenshots/Screenshot%20(121).png)
+![Service Details](screenshots/Screenshot%20(122).png)
+![Nginx Page](screenshots/Screenshot%20(123).png)
+![Scaling](screenshots/Screenshot%20(124).png)
+
 
 
 
