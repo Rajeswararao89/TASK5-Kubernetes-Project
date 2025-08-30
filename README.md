@@ -40,83 +40,60 @@ k8s-minikube-project/
 ## 🚀 Steps I Followed
 
 ### 1️⃣ Started Minikube
-I used the Docker driver to keep things lightweight and avoid extra VMs.
-```bash
-minikube start --driver=docker
-kubectl get nodes
-This gave me a single-node Kubernetes cluster ready to use.
+-I used the Docker driver to keep things lightweight and avoid extra VMs.
+-minikube start --driver=docker
+-kubectl get nodes
+-This gave me a single-node Kubernetes cluster ready to use.
 
-2️⃣ Created ConfigMap & Secret
-To make the deployment more realistic, I created a ConfigMap for non-sensitive configs and a Secret for sensitive data.
+## 2️⃣ Created ConfigMap & Secret
+-To make the deployment more realistic, I created a ConfigMap for non-sensitive configs and a Secret for sensitive data.
 
-kubectl apply -f manifests/configmap.yaml
-kubectl apply -f manifests/secret.yaml
-3️⃣ Deployed the Application
-I wrote a Deployment manifest for an Nginx container, linked it to the ConfigMap & Secret, and exposed it using a NodePort service.
+-kubectl apply -f manifests/configmap.yaml
+-kubectl apply -f manifests/secret.yaml
+## 3️⃣ Deployed the Application
+-I wrote a Deployment manifest for an Nginx container, linked it to the ConfigMap & Secret, and exposed it using a NodePort service.
 
-kubectl apply -f manifests/deployment.yaml
-kubectl apply -f manifests/service.yaml
-kubectl get pods
-kubectl get svc
-4️⃣ Accessed the Application
-Since I was running in Vagrant, I used:
+-kubectl apply -f manifests/deployment.yaml
+-kubectl apply -f manifests/service.yaml
+-kubectl get pods
+-kubectl get svc
+## 4️⃣ Accessed the Application
+-Since I was running in Vagrant, I used:
 
-minikube service my-app-service --url
-This gave me a working Nginx welcome page.
+-minikube service my-app-service --url
+-This gave me a working Nginx welcome page.
 
-5️⃣ Scaled the Application
-To test Kubernetes scaling, I increased replicas from 2 to 3:
+## 5️⃣ Scaled the Application
+-To test Kubernetes scaling, I increased replicas from 2 to 3:
 
-kubectl scale deployment my-app --replicas=3
-kubectl get pods
-6️⃣ Performed Rolling Updates
-I updated the Nginx version twice to simulate production updates:
+-kubectl scale deployment my-app --replicas=3
+-kubectl get pods
+## 6️⃣ Performed Rolling Updates
+-I updated the Nginx version twice to simulate production updates:
 
-kubectl set image deployment/my-app my-app-container=nginx:1.27-alpine
-kubectl rollout status deployment/my-app
-Later, I did another update:
+-kubectl set image deployment/my-app my-app-container=nginx:1.27-alpine
+-kubectl rollout status deployment/my-app
+-Later, I did another update:
 
-kubectl set image deployment/my-app my-app-container=nginx:1.26-alpine
-kubectl rollout status deployment/my-app
-
-📸 Screenshots
-I took screenshots of:
-
-Minikube cluster start & kubectl get nodes
-
-Pods running
-
-Services with NodePort
-
-Application output (Nginx welcome page)
-
-Scaling in action
-
-Rolling update progress
-
-📚 Key Learnings
-How to set up and run a Kubernetes cluster locally with Minikube.
-
-The difference between Pods, Deployments, and Services.
-
-How to manage environment configuration using ConfigMaps and Secrets.
-
-Scaling deployments and performing rolling updates without downtime.
-
-The importance of keeping manifests in a safe location outside the cluster for reusability.
+-kubectl set image deployment/my-app my-app-container=nginx:1.26-alpine
+-kubectl rollout status deployment/my-app
 
 
-## ​ Screenshots
+## 📚 Key Learnings
+- How to set up and run a Kubernetes cluster locally with Minikube.b
+- The difference between Pods, Deployments, and Services.
+-How to manage environment configuration using ConfigMaps and Secrets.
+-Scaling deployments and performing rolling updates without downtime.
+-The importance of keeping manifests in a safe location outside the cluster for reusability.
 
-![Cluster Start](screenshots/1-cluster-start.png)
- 
-![Pods Running](screenshots/2-pods-running.png)
- 
-![Service Details](screenshots/3-service-details.png)
- 
-![Nginx Page](screenshots/4-nginx-page.png)
- 
-![Scaling](screenshots/5-scaling-and-rolling-update.png) 
+
+## Screenshots
+
+![Cluster Start](screenshots/1%20%cluster%20%start.png) 
+![Pods Running](screenshots/2%20%pods%20%running.png)
+![Service Details](screenshots/3%20%service%20%details.png)
+![Nginx Page](screenshots/4%20%nginx%20%page.png)
+![Scaling](screenshots/5%20%scaling%20%and%20%rolling%20%update.png) 
 
 
 
