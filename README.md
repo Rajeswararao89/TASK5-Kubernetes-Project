@@ -89,11 +89,11 @@ k8s-minikube-project/
 
 ## Screenshots
 
-![Cluster Start](screenshots/1%20%cluster%20%start.png) 
-![Pods Running](screenshots/2%20%pods%20%running.png)
-![Service Details](screenshots/3%20%service%20%details.png)
-![Nginx Page](screenshots/4%20%nginx%20%page.png)
-![Scaling](screenshots/5%20%scaling%20%and%20%rolling%20%update.png) 
+![Cluster Start](screenshots/1%20cluster%20start.png) 
+![Pods Running](screenshots/2%20pods%20running.png)
+![Service Details](screenshots/3%20service%20details.png)
+![Nginx Page](screenshots/4%20nginx%20page.png)
+![Scaling](screenshots/5%20scaling%20and%20rolling%20update.png) 
 
 
 
